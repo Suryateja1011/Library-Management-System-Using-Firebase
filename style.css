@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d7e1ec, #f5f9ff);
+  color: #444;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.4s ease;
+}
+
+header {
+  background: #344e86;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 15px rgba(52, 78, 134, 0.5);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+main {
+  max-width: 960px;
+  width: 100%;
+  padding: 2.5rem 2rem 3rem;
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+section {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem 2.8rem 2.8rem;
+  box-shadow:
+    0 8px 20px rgba(32, 45, 74, 0.07),
+    0 0 0 1px rgba(32, 45, 74, 0.05);
+  flex: 1 1 420px;
+  min-width: 320px;
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow:
+    0 12px 30px rgba(32, 45, 74, 0.12),
+    0 0 0 1px rgba(32, 45, 74, 0.07);
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #344e86;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+label {
+  display: block;
+  margin: 0.6rem 0 0.85rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #5671a8;
+  user-select:none;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.62rem 1rem;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 2px solid #ccd9f6;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.07);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  font-weight: 500;
+  color: #223366;
+  user-select: text;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: #a0adc2;
+  font-weight: 400;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #5a7ade;
+  box-shadow: 0 0 8px #a5afe7;
+}
+
+button {
+  margin-top: 1.4rem;
+  background-color: #4a66d7;
+  color: white;
+  border: none;
+  padding: 0.85rem 1.7rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(74, 102, 215, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #3551b5;
+  box-shadow: 0 10px 24px rgba(53, 81, 181, 0.7);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(53, 81, 181, 0.4);
+}
+
+.books-list {
+  margin-top: 1.6rem;
+  max-height: 460px;
+  overflow-y: auto;
+  border-radius: 16px;
+  padding-right: 6px;
+  user-select:none;
+  scrollbar-width: thin;
+  scrollbar-color: #9bb0e7 transparent;
+}
+
+.books-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.books-list::-webkit-scrollbar-thumb {
+  background-color: #9bb0e7;
+  border-radius: 12px;
+}
+
+.books-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.book-card {
+  border-bottom: 1.8px solid #dde4f4;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  user-select:none;
+}
+
+.book-card:hover {
+  background-color: #f0f4ff;
+}
+
+.book-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 0.18rem;
+  color: #263859;
+  user-select:text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-details {
+  font-size: 0.95rem;
+  color: #6174a2;
+  user-select:text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  user-select: none;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.06);
+  min-width: 95px;
+  text-align:center;
+}
+
+.available {
+  background-color: #e1fde8;
+  color: #388e3c;
+  box-shadow: inset 0 0 10px #88d07e;
+}
+
+.borrowed {
+  background-color: #ffe3e3;
+  color: #c62828;
+  box-shadow: inset 0 0 10px #f58b8b;
+}
+/* (keep your previous styles) */
+
+/* Auth UI Styles */
+.auth-container {
+  margin: 1rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.auth-container input {
+  padding: 0.5rem 0.8rem;
+  margin: 0 0.3rem 0.8rem 0.3rem;
+  border-radius: 8px;
+  border: 1.8px solid #ddd;
+  font-size: 1rem;
+}
+.auth-container button {
+  margin: 0 0.3rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #4a66d7;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.auth-container button:hover {
+  background-color: #3551b5;
+}
+
+
+/* existing styles here, plus... */
+
+/* Borrow and Return button distinct styles */
+.btn-borrow-return.borrow-btn {
+  background-color: #4a66d7;
+  border-color: #4a66d7;
+  color: white;
+  box-shadow: 0 6px 15px rgba(74, 102, 215, 0.5);
+}
+
+.btn-borrow-return.borrow-btn:hover {
+  background-color: #3551b5;
+  box-shadow: 0 10px 24px rgba(53, 81, 181, 0.7);
+}
+
+.btn-borrow-return.return-btn {
+  background-color: #d9534f;
+  border-color: #d9534f;
+  color: white;
+  box-shadow: 0 6px 15px rgba(217, 83, 79, 0.6);
+}
+
+.btn-borrow-return.return-btn:hover {
+  background-color: #b7372d;
+  box-shadow: 0 10px 24px rgba(183, 55, 45, 0.8);
+}
+
+.btn-borrow-return:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 9px rgba(74, 102, 215, 0.4);
+}
+
+.filter-group {
+  margin-bottom: 1.3rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+select, input[type="search"] {
+  max-width: 260px;
+  flex-grow: 1;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-weight: 600;
+  border-radius: 18px;
+  border: 2px solid #ced7fc;
+  background-color: #f8fbff;
+  transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="search"]:focus {
+  border-color: #516acb;
+  outline: none;
+  box-shadow: 0 0 10px #a6b6f5;
+}
+
+.stats {
+  margin-top: 1.4rem;
+  font-size: 1rem;
+  color: #6174a2;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+  white-space: pre-wrap;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  text-align: center;
+  color: #778dbf;
+  font-size: 1rem;
+  background: #e6edff;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
