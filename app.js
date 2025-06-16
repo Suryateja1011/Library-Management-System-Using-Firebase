@@ -1,6 +1,6 @@
 // Firebase config - replace with your actual Firebase project configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZEVt0Aq3sTHQVHQL90ZTeX8eQJvXjKCk",
+  apiKey: "Your API KEY",
   authDomain: "library-management-syste-7a4c2.firebaseapp.com",
   projectId: "library-management-syste-7a4c2",
   storageBucket: "library-management-syste-7a4c2.firebasestorage.app",
